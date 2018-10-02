@@ -1,3 +1,17 @@
+3)Write a python class to reverse a sentence (initialized via constructor) word by word.
+Example: “I am here” should be reversed as “here am I”. Create instances of this class for each of the
+three strings input by the user and display the reversed string for each, in descending order of number of
+vowels in the string. 
+
+
+
+
+
+
+
+
+
+
 
 from collections import Counter
 class r_string:
