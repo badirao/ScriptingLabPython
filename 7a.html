@@ -1,0 +1,45 @@
+<html>
+<body>
+<form>
+Subject 1: <input type = 'text' id = 'sub1' value = ''><br>
+Subject 2: <input type = 'text' id = 'sub2' value = ''><br>
+<input type = 'button' value = 'Calculate' onclick = 'Calculate()'><br>
+Total: <input type = 'text' id = 'total' value = ''><br>
+Grade: <input type = 'text' id = 'grade' value = ''><br>
+</form>
+</body>
+<script>
+function Calculate()
+{
+	var Sub1 = parseInt(document.getElementById('sub1').value);
+	var Sub2 = parseInt(document.getElementById('sub2').value);
+	var total = document.getElementById('total');
+	var grade = document.getElementById('grade');
+	if(Sub1  > 100 || Sub2 > 100)
+	{
+		alert('Greater than 100! invalid!');
+		total.value = grade.value = 0;
+		return;
+	}
+
+	var sum = Sub1 + Sub2;
+	
+	total.value = sum;
+	console.log(sum);
+	
+	if(sum/2 > 90)
+	{
+     grade.value = 'S';
+	}
+	else if(sum/2 >80)
+	{
+	 grade.value = 'A';
+	}
+	else
+	{
+	 grade.value = 'F';
+	}
+}
+</script>
+</html>
+
