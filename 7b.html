@@ -1,0 +1,27 @@
+<html>
+<body>
+Cake: <input type = 'radio' id = 'cake'><br>
+<img src= 'cake.jpeg'><br>
+Cookie: <input type = 'radio' id = 'cookie'><br>
+<img src= 'cookie.jpg'><br>
+Quantity: <input type = 'text' id = 'Quantity' value = ''><br>
+<input type = 'button' value = 'Calculate' onclick = 'Calculate()'><br>
+Total Amount: <input type = 'text' id = 'total' value = ''><br>
+</body>
+<script>
+function Calculate()
+{
+ var amount = document.getElementById('total');
+ var quantity = parseInt(document.getElementById('Quantity').value);
+ 
+ if(document.getElementById('cookie').checked)
+ {
+  amount.value = 10*quantity;
+ }
+ else if(document.getElementById('cake').checked)
+ {
+  amount.value = 5*quantity;
+ }
+}
+</script>
+</html>
